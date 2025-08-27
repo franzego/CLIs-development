@@ -64,12 +64,7 @@ func main() {
 	} else {
 		defer file.Close()
 	}
-
-	//size := res.ContentLength
-
-	// Create progress bar
-
-	//bar := pb.Full.Start64(size)
+	// Handling the progress bar
 	count := 10000
 	// create and start new bar
 	bar := pb.StartNew(count)

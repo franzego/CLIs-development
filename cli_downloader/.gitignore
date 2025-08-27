@@ -1,0 +1,27 @@
+# Binaries
+/bin/
+/pkg/
+/dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Logs
+*.log
+
+# Environment variables
+*.env
+.env
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Go build cache & test binaries
+*.test
