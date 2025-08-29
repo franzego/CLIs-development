@@ -7,7 +7,7 @@ Built with Go, it provides a clean interface, real-time progress feedback, and s
 
 📥 Direct Downloads – Fetch files from any valid URL.
 
-📊 Progress Bar – Monitor real-time download progress.
+📊 Progress Bar – Monitor real-time download progress. (appreciation to https://github.com/cheggaaa/pb)
 
 💾 Flexible Output – Save files to the current directory or a custom path.
 
@@ -30,8 +30,7 @@ go build -o dazai .
 | Flag | Description                                         | Example                           |
 | ---- | --------------------------------------------------- | --------------------------------- |
 | `-u` | **(Required)** URL of the file to download          | `-u https://example.com/file.zip` |
-| `-o` | Output directory or filepath (default: current dir) | `-o ./downloads/`                 |
-| `-h` | Show help and usage information                     | `./urldownloader -h`              |
+
 
 📂 Example Workflow
 

@@ -292,20 +292,6 @@ func HandleGet(getCmd *flag.FlagSet, getUrl *string) {
 		os.Exit(2)
 
 	} else {
-		//*/ //godotenv for loading environment variables
-		//if err := godotenv.Load(); err != nil {
-		//	log.Fatal("Error in accessing .env file")
-		//}
-		// load environment variable
-		//dir := os.Getenv("Local_Storage")
-		//url_downloader := os.Getenv("Download_url")
-
-		//url_downloader := UrlAccepter()
-		//create a directory to store the files
-
-		/*if err := CreateDirectory(dir); err != nil {
-			log.Fatal(err)
-		}*/
 
 		//make http get request
 		resp, err := GetRequest(*getUrl)
@@ -362,10 +348,6 @@ func main() {
 	//dazai get subcommands
 	getCmd := flag.NewFlagSet("get", flag.ExitOnError)
 	getUrl := getCmd.String("u", "", "Download the inputed url")
-	//getAll := getCmd.Bool("all", false, "Download multiple files at the same time")
-	//getResume := getCmd.Bool("p", false, "Resumes all failed downloads")
-	//getfolder := getCmd.Bool("f", false, "Specify the folder to save the files in")
-
 	//dazai add subcommands
 	addCmd := flag.NewFlagSet("add", flag.ExitOnError)
 	addUrl := addCmd.String("all", "", "Download multiple files at the same time")
@@ -378,15 +360,6 @@ func main() {
 		fmt.Println("  go run downloader.go add --all <URL1> <URL2> ...")
 		os.Exit(1)
 	}
-
-	// we check the other arguments to make sure they were actually passed correctly with get (our subcommand)
-
-	/*if os.Args[1] == "get" {
-		HandleGet(getCmd, getUrl)
-	} else {
-		println("Don't Understand that command")
-	}*/
-
 	switch os.Args[1] {
 	case "get":
 		// Only parse args if we have enough arguments
