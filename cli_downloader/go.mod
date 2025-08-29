@@ -2,10 +2,7 @@ module cli_downloader
 
 go 1.25.0
 
-require (
-	github.com/cheggaaa/pb/v3 v3.1.7
-	github.com/lpernett/godotenv v0.0.0-20230527005122-0de1d4c5ef5e
-)
+require github.com/cheggaaa/pb/v3 v3.1.7
 
 require (
 	github.com/VividCortex/ewma v1.2.0 // indirect
