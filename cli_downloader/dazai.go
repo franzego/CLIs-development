@@ -44,7 +44,7 @@ func worker(jobs <-chan Job, results chan<- Result, wg *sync.WaitGroup) {
 		// Process each response individually
 		for i, resp := range resps {
 			// Close response body when we're done with it
-			defer resp.Body.Close()
+			//defer resp.Body.Close()
 
 			//ask user to save
 			filename, err := SavingMultipleFileName()
